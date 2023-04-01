@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: root
+    password: test
+  sql:
+    init:
+      schema-locations: classpath:db/schema-h2.sql
+      data-locations: classpath:db/data-h2.sql
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: false
+server:
+  servlet:
+    context-path: /api
+  port: 8080
+logging:
+  level:
+    com.apktool.jpa: debug
+    org.springframework.data: debug
+    org.hibernate.sql: trace
