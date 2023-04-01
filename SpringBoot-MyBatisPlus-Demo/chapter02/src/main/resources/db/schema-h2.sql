@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS sys_user;
+DROP TABLE IF EXISTS sys_class;
+
+CREATE TABLE sys_user
+(
+    id       BIGINT NOT NULL COMMENT '主键ID',
+    name     VARCHAR(30) NULL DEFAULT NULL COMMENT '姓名',
+    age      INT NULL DEFAULT NULL COMMENT '年龄',
+    email    VARCHAR(50) NULL DEFAULT NULL COMMENT '邮箱',
+    class_id BIGINT COMMENT '所在班级',
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE sys_class
+(
+    id   BIGINT NOT NULL COMMENT '主键ID',
+    name VARCHAR(30) NULL DEFAULT NULL COMMENT '班级名称',
+    desc VARCHAR(50) NULL DEFAULT NULL COMMENT '班级描述',
+    PRIMARY KEY (id)
+);
