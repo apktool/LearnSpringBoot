@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: root
+    password: test
+  sql:
+    init:
+      schema-locations: classpath:db/schema-h2.sql
+      data-locations: classpath:db/data-h2.sql
+server:
+  servlet:
+    context-path: /api
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+logging:
+  level:
+    com.apktool.mybatis: debug
+    org.apache.ibatis: debug
